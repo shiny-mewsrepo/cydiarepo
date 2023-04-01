@@ -1,0 +1,551 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <html>
+        <head>
+            <title>AppStore++</title>
+            <link rel="stylesheet" type="text/css" href="/menes.css"/>
+            <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0"/>
+        </head>
+        
+        <body class="pinstripe">
+            
+            <panel>
+                <div class="header" style="color:black">
+                    <img src="appstoreplus/icon.png" width="59" height="60"/>
+                    <div>
+                        <h1>AppStore++</h1>
+                        <h2>by CokePokes</h2>
+                        <h2> </h2>
+                    </div>
+                </div>
+                
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Allows you to downgrade/upgrade apps in the AppStore, block updates, bypass 200MB download limit, disable search ads &amp; disable app thinning.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Requires</label>
+                <fieldset style="clear:both">
+                    
+                    <div style="background:#FEE; -moz-border-radius-bottomleft: 9px; -webkit-border-bottom-left-radius: 9px; -moz-border-radius-bottomright: 9px; -webkit-border-bottom-right-radius: 9px; -moz-border-radius-topleft: 9px; -webkit-border-top-left-radius: 9px; -moz-border-radius-topright: 9px; -webkit-border-top-right-radius: 9px;">
+                        
+                        <p>iOS 11.x-15</p>
+                        
+                    </div>
+                </fieldset>
+                
+
+                <label>Changes in 0.10.1-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Updated API access.<p/>
+                        <p>Fixed arm64e devices on iOS13 and lower. Holy shit, this is why i never upgrade my Mac or xCode.<p/>
+                        <p>Also, if youre using AppStore++(trollstore) on a jailbroken device, please uninstall. Without the jailbreak version of AppStore++ installed, youre not contributing to the server ultimately leading to the destruction of this tweak/app/service. No versions = no AppStore++<p/>
+                    </div>
+                </fieldset>
+
+                <label>Changes in 0.10.0-1</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Updated API access.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.18</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>No longer depends on a country code for looking up apps! I finally figured out how to get the bundleId from the GET button. That mf was a bitch since its coded in swift. Rejoice!<p/>
+                        <p>SpringBoard 3D touch no longer needs to look up since my dumbass had the answer all along for getting the store id for an app. So no country code needed there either!<p/>
+                        <p>Basically everything I just wrote means that it fixes a crash if you live outside the US. No more multiple connections to apples server for lookups.<p/>
+                        <p>I probably did some other things too but this was a drunk build. Install at your own risk, bitch.<p/>
+                    </div>
+                </fieldset>
+                
+                <!--
+                
+                <label>Changes in 0.9.17-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Hopefully fixes a crash, if not install libcr4shedsend from my repo + Cr4shed<p/>
+                        <p>Switched some shit around, springboard now handles uploads<p/>
+                        <p>Using SSDevice to grab country code since it seems to be more reliable than NSLocale<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.17-4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes a crash when downgrading/blocking updates when device region is set outside of the U.S.<p/>
+                        <p>Allows users outside of the US to crowd source app versions. (Didnt realize apps werent logging in other countries)<p/>
+                        <p>Fixes the Auto Download Option on some devices.<p/>
+                        <p>Some code optimization in network requests.<p/>
+                        <p>Love yourself!<p/>
+
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.17</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed bug caused from webscraping when server is down. (weird version numbers/crash)<p/>
+                        <p>Allow downgrades in springboard Spotlight search. Requires auth.<p/>
+                    </div>
+                </fieldset>
+                                
+                <!--
+                
+                <label>Changes in 0.9.16-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed a crash in itunesstored daemon (downloading apps regularly would hang)<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.16</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Blocking updates is working more reliably.<p/>
+                        <p>Fixed a bug with the chinese webscraping.<p/>
+                        <p>Fixed the update badge on the AppStore. If it's wrong, manually refresh updates.<p/>
+                        <p>Prolly fixed a few other bugs but I don't remember. <p/>
+                        <p>Fixed camera hang in v0.9.16-1<p/>
+                    </div>
+                </fieldset>
+                
+                
+                <label>Changes in 0.9.15</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Removed MixRank since they became lil bitches and locked version history behind accounts.<p/>
+                        <p>Replaced MixRank with some chinese site. Hopefully it holds longer than Mixrank. I can RIP again.<p/>
+                        <p>Go buy a share of GME, you'll thank me later but I want 10 percent of profits. hehehe.<p/>
+                        <p>Also note to future parents, quit circumcising your kids. Let it be their choice when theyre older. The Kellogs cereal founder made it a thing cuz he wanted to stop dudes from experiencing pleasure. Dont believe me? Look it up.<p/>
+                        <p>End transmission..<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-11</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Dropped NSDistributedNotificationCenter to fix lags systemwide.<p/>
+                        <p>This change may fix the black camera bug and some crashes.<p/>
+                        <p>To those that were experiencing these bugs, please let me know @cokepokes if the issue is fixed.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-10</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Pretty sure I fixed the camera problem &amp; app hangs.<p/>
+                        <p>Added option to reset AppStore++ preferences in Settings.app<p/>
+                        <p>Fixed a crash when deleting apps within AppStore++ on iOS14+<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-8</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Removed my dev certificate that may have been causing the Odyssey jailbreak to hang. Thanks @aspen for letting me know!<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-7</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Attemped to fix a springboard issue caused by dlopen. Let me know if you still get a black camera occasionally. Usually sorted with a respring.<p/>
+                        <p>Cleans my junk from the appstore &amp; springboard preference files.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-6</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Finally found a fix for preferences. They are now stored in keychain and accessible between the 3 processes without doing some exhausting bullshit. This should fix the issue where the Auto preference wasnt working for DOWNLOAD OPTIONS. Please make one normal OEM purchase/update without the help of appstoreplus to solve the unable to process purchases at this time error.<p/>
+                    </div>
+                </fieldset>
+                
+                
+                <label>Changes in 0.9.14-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Removed uicache command so Cydia doesnt crash and cause a dpkg error. If you have the new line error, you can email me at cokepokes at gmail and ill help you fix it if still in jailbroken state. I was told someone used odessey to rejailbreak and then fixed the newline error and reverted back to unc0ver. Not sure if they lost their tweaks. rootfs will fix it obviously but thats last resort.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes an issue where downgrades fails. (Install a free app without using AppStore Plus first)<p/>
+                        <p>Testing out ads. Yea I know. This sucks for everyone but my server costs 55.00 a month to host AppStorePlus. I shouldnt be spending my savings on a tweak I created. Instead of shutting the tweak down Im introducing ads to see if that will sustain the server costs. I sorta relied on the community to donate to help but the jailbreak community isnt very giving. Ive gotten two substantial donations in the past 4 months, Andy and Rashed. I plan to refund them if the ads cover the costs. I doubt they will but Im optimistic. Im not sure how the tweak will work if youre using an adblocker. Let me know. Love Coke.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Mixrank is set up as backup throughout the tweak.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.14-1</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Springboard portion of the tweak will use MixRank to get versions when my website is down. Or if I die.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.13-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>No longer requires login for force touch downgrades<p/>
+                        <p>Added option to disable force touch in AppStore++ prefs<p/>
+                        <p>Force touch icon respects darkmode prefs<p/>
+                        <p>Dropped letsdowngrade requirement. I did this because I dont want to open letsdowngrade to allow downgrades without a login.<p/>
+                        <p>Fixed a bug when deleting apps within AppStore++ prefs<p/>
+                        
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.13-1</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added an icon to the force touch view<p/>
+                        <p>Force touch downgrade should now work on iOS11+<p/>
+                        <p>Prevent a crash from force touch if something went wrong<p/>
+
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.13</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added ability to downgrade from force touch on app icons. iOS13+ only<p/>
+                        <p>Now uses letsdowngrade<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.12</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Reworked itunesstored hook to not hit my server as hard for logging, if everyone installs this the server might not go down as much.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.10</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed preferences on every iOS version by using NSUserDefaults.<p/>
+                        <p>Fixed blocking updates on iOS 13.5.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.10</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes another crash and may fix many other issues some users have reported.<p/>
+                        <p>Loading server stuff on a backgrounded thread so thats good, may fix some crashes too.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-11</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed crashes in itunesstored when using Update All button and some other bug fixes.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-10</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed badge count for blocked updates..not sure if this works on iOS12.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-9</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed preferences on unc0ver v4.3.1 on iOS 12.4 &amp; below. Apparently the unc0ver version I was using nuked preferences. Like what in the actual fuck. I miss the old jailbreak when things werent wishy washy &amp; developing things just worked out of the box. I really need to write my own preferences XPC daemon instead of checking conditions on the device and writing preferences in different directories.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-6</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>REWORKED PREFERENCES AGAIN. IF IT DOESNT WORK THEN TOO BAD.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Reworked the preferences yet again..fml<p/>
+                        <p>Should fix blocking on Chinese AppStore<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes lag when opening Account/Updates &amp; AppStore++ settings<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-3</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Now uses Cephei instead of rocketbootstrap<p/>
+                        <p>Fixed a crash when holding Arcade item buttons<p/>
+                        <p>Auto pastes identifier when using Manual Install<p/>
+                        <p>Please respring after installing!<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Reworked rocketbootstrap implementation by seperating preferences into 2 different files<p/>
+                        <p>Reenabled Disable App Thinning option<p/>
+                        <p>Bug fixes related to rocketbootstrap<p/>
+
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.9</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed alot of issues on unc0ver hopefully/blocking updates<p/>
+                        <p>Added Manage Installed Apps section<p/>
+                        <p>Added app icons and version installed in Blocked Updates list<p/>
+                        <p>Added rocketbootstrap dependency because unc0ver doesnt fuck with entitlements like every other jailbreak. This is why i have issues developing for unc0ver. Its a jailbreak developers nightmare. I spent hours changing my code to accommodate the sandbox restrictions. fml.<p/>
+                        <p>Bug fixes.<p/>
+                        
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.8-6</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed blocking issue introduced in v0.9.8-5.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.8-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added better method for hiding updates. Please unblock apps and reblock on iOS13+.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.8-4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed hiding updates on iOS13.x<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.8-3</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Full downgrade support on A12/13 devices.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.8-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Partial A12/13 support. Its whatever.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.7</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes a freeze when my website is unresponsive.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.6-1</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes a crash when trying to downgrade certain apps in the AppStore.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.6</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>No longer need to navigate to the app depiction on iOS 12.2.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>iOS 12.2 support. Requires to go to the app depiction before downgrading.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Potentially fixed an issue that opens the target app.<p/>                        
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9.1-1</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added option to disable app thinning.<p/>
+                        <p>Added list of Blocked Updates in tweak preferences. (Hold the account button to access)<p/>
+
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-14</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixes a crash when using "Manual Install." May fix a few other bugs with downgrading.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-13</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed an issue where app lookup did not work in other countries. If you get an error with 'couldn't be opened', try opening the app description first before downgrading.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-12</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Behind the scene bugfixes you prolly won't notice.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-11</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Prolly fixes a sh*t ton of bugs for new users since preferences weren't being saved. Sooooo yea this explains why Block Updates wasn't working for some of you and prolly some other wild bugs that relied on prefs to communicate with the itunesstored daemon. My brad.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-10</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added preference for 3G/4G Unrestrictor for 150MB+ downloads<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-9</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added Preferences<p/>
+                        <p>Added popup tips!<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-8</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed an issue where Block Update was not working on some devices.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-6</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed an issue where downgrade never was initiated.<p/>
+                        <p>Fixed an issue where user's manual installs were getting logged to my server leading to bad update info for others.<p/>
+                        <p>Note: If you're tired of downgrades requiring passcode/faceID, download any app normally once.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9-3</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Cleaned code that could have caused issues downgrading.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.9</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Manage apps from any Buy/Open/Get button, even from Updates tab. Finally.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.8-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fix for Blocking Updates on iOS11<p/>
+                        <p>Fixed postrm script to unload tweak from daemons.<p/>
+                        
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.8</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Added Option to Block Updates<p/>
+                        <p>(Not sure if Block Updates works with Auto Update enabled. Report back!)<p/>
+                        
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.7-5</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed crash on iPad<p/>
+                        <p>Potentially fixed the tweak from not loading on some devices.<p/>
+
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.7-4</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>arm64e support (A12)<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.7-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Fixed an issue where versions wouldn't load from server.<p/>
+                        <p>Finally squashed the bug that opened the target app.<p/>
+                    </div>
+                </fieldset>
+                
+                <label>Changes in 0.6-2</label>
+                <fieldset style="clear:both">
+                    <div>
+                        <p>Changed hold time to 0.4.<p/>
+                        <p>Fixed a bug that opened the target app when downgrading.<p/>
+                    </div>
+                </fieldset>
+                
+                -->
+                
+                <div class="horizontal-scroll-wrapper" id="scroller">
+                    <div class="horizontal-scroll-area" style="width:235px">
+                        <img src="appstoreplus/screenshot1.jpeg" />
+                    </div>
+                    <div class="horizontal-scroll-pips">
+                    </div>
+                </div>
+                
+                <fieldset>
+                    <a href="https://twitter.com/CokePokes">
+                        <img class="icon" src="http://cache.saurik.com/cydia/icon/twitter.png"/>
+                        <div>
+                            <label>Find CokePokes on Twitter</label>
+                        </div>
+                    </a>
+                </fieldset>
+                
+            </panel>
+            
+        </body>
+    </html>
